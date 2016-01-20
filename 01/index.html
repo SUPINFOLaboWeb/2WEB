@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Pokedex</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <nav onclick="changeColor()">
+                <ul id="menu">
+                    <li>Les pokemons</li>
+                    <li>Contact</li>
+                    <li>Des bisous</li>
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+            <article>
+                <h1>Définition</h1>
+                <p>Pokémon (ポケモン?), prononcé [po̞kʲe̞mõ̞ɴ], est une franchise créée par Satoshi Tajiri en 1996, présente en particulier en jeu vidéo, dans des séries éditées par Nintendo. Selon les statistiques officielles de Nintendo en octobre 2010, les jeux Pokémon se sont vendus à environ 250 millions d’unités. Le jeu vidéo Pokémon Rouge et Bleu s’est vendu à plus de 30 millions d’exemplaires, ce qui en fait un record des ventes dans l’histoire du jeu vidéo.</p>
+            </article>
+            <article>
+                <h1>Liste des pokemons</h1>
+                <table>
+                    <thead>
+                        <th>Numéro</th>
+                        <th>Nom</th>
+                        <th>Type</th>
+                        <th>Image</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>Bulbizarre</td>
+                            <td>Plante / Poison</td>
+                            <td><img src="images/001.png" alt="Bulbizarre" class="imgPokemon" onmouseover="alert('BULLLLLLBIZARRRRRRREEE !!');"></td>
+                        </tr>
+                        <tr>
+                            <td>004</td>
+                            <td>Salamèche</td>
+                            <td>Feu</td>
+                            <td><img src="images/004.png" alt="Salamèche" class="imgPokemon"></td>
+                        </tr>
+                        <tr>
+                            <td>007</td>
+                            <td>Carapuce</td>
+                            <td>Eau</td>
+                            <td><img src="images/007.png" alt="Carapuce" class="imgPokemon"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+
+        <footer>
+            <a href="http://www.pokemon.com/fr/">Site officiel pokemon</a>
+        </footer>
+        <script src="app.js" type="text/javascript"></script>
+    </body>
+</html>

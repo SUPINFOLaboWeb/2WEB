@@ -1,0 +1,38 @@
+/* Élément simple */
+body {
+    background-color: lightgray;
+}
+
+/* ID */
+#menu {
+    list-style: none;
+}
+
+/* Classe */
+.imgPokemon {
+    width: 80px;
+}
+
+/* Éléments imbriqués */
+table tr td {
+    padding: 20px;
+}
+
+/* Père fils (sans intermédiaire) */
+article > p {
+    font-size: 1.1em;
+}
+
+/* Pseudo élément (Plus d'infos : http://stylescss.free.fr/pseudo-elements.php) */
+a:hover {
+    color: red;
+}
+
+/* Groupe */
+h1, h2, h3, h4, h5, h6 {
+    color: red;
+}
+
+
+
+/* Plus d'infos sur les sélécteurs CSS : http://stylescss.free.fr/selecteurs.php */
