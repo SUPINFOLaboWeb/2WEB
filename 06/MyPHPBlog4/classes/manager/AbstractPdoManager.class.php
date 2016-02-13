@@ -7,7 +7,7 @@ class AbstractPdoManager
     protected static $dtblist = array();
     protected $dtb;
 
-    public function __construct($dsn = null, $username = null, $password = null, $prefix='')
+    public function __construct($dsn = null, $username = null, $password = null, $prefix = '')
     {
         $dsn = is_null($dsn) ? DB_DSN : $dsn;
         $username = is_null($username) ? DB_USER : $username;

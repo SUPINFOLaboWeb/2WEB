@@ -27,11 +27,11 @@ class SimplePostManager implements PostManager
 
     public function findPostById($id)
     {
-        return $_SESSION['posts'][$i];
+        return $_SESSION['posts'][$id];
     }
 
     public function removePost($id)
     {
-        unset($_SESSION['posts'][$i]);
+        unset($_SESSION['posts'][$id]);
     }
 }

@@ -13,7 +13,7 @@ $pm = new SimplePostManager();
 
 ?>
 
-<!doctype html>
+<!DOCTYPE html>
 <html>
     <head>
         <title>Posts list</title>

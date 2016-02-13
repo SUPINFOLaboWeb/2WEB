@@ -1,6 +1,6 @@
 <?php
     function translator($string) {
-        $tranlate = array(
+        $translate = array(
             'a' => 'y', 'b' => 'p', 'c' => 'l', 'd' => 't', 'e' => 'a', 'f' => 'v',
             'g' => 'k', 'h' => 'r', 'i' => 'e', 'j' => 'z', 'k' => 'g', 'l' => 'm',
             'm' => 's', 'n' => 'h', 'o' => 'u', 'p' => 'b', 'q' => 'x', 'r' => 'n',
@@ -11,7 +11,7 @@
         $word = explode('.', $string);
 
         foreach ($word as $key => $value) {
-            $word[$key] = $tranlate[$value];
+            $word[$key] = $translate[$value];
         }
 
         return implode('.', $word);
@@ -19,7 +19,7 @@
 
     // Exercise 4/4
     function translatorWithoutDot($string) {
-        $tranlate = array(
+        $translate = array(
             'a' => 'y', 'b' => 'p', 'c' => 'l', 'd' => 't', 'e' => 'a', 'f' => 'v',
             'g' => 'k', 'h' => 'r', 'i' => 'e', 'j' => 'z', 'k' => 'g', 'l' => 'm',
             'm' => 's', 'n' => 'h', 'o' => 'u', 'p' => 'b', 'q' => 'x', 'r' => 'n',
@@ -30,7 +30,7 @@
         $word = str_split($string);
 
         foreach ($word as $key => $value) {
-            $word[$key] = $tranlate[$value];
+            $word[$key] = $translate[$value];
         }
 
         return implode($word);
