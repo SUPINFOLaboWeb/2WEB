@@ -1,0 +1,41 @@
+security:
+    providers:
+        main:
+            entity: { class: UserBundle\Entity\User, property: username }
+
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        main:
+            anonymous: ~
+
+            pattern: ^/
+            form_login:
+                login_path: user_user_login
+                check_path: user_user_logincheck
+
+            logout:
+                path: /user/logout
+                target: /
+
+            remember_me:
+                secret: "%secret%"
+                lifetime: 31536000
+
+    encoders:
+        UserBundle\Entity\User:
+            algorithm: sha512
+            iterations: 15629
+            encode_as_base64: true
+
+    role_hierarchy:
+        ROLE_ADMIN: ROLE_USER
+        ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+
+    access_control:
+        - { path: ^/user/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/user/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/user, role: ROLE_USER }
+        - { path: ^/admin, role: ROLE_ADMIN }

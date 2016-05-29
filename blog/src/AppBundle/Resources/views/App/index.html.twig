@@ -1,0 +1,33 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Liste des articles {{ parent() }}{% endblock %}
+
+{% block body %}
+<table class="table table-bordered">
+    <thead>
+        <th>Titre</th>
+        <th>Auteur</th>
+        <th>Date</th>
+        {% if is_granted('ROLE_USER') %}<th>Action(s)</th>{% endif %}
+    </thead>
+    <tbody>
+        {% for post in posts %}
+            <tr>
+                <td><a href="{{ path('blog_post_read', {'id': post.id}) }}">{{ post.title }}</a></td>
+                <td>{{ post.user.username }}</td>
+                <td>{{ post.datetimeCreate|date("d/m/Y") }}</td>
+                {% if is_granted('ROLE_USER') %}
+                    <td>
+                        <a href="{{ path('blog_post_update', {'id': post.id}) }}" class="btn btn-xs btn-primary">
+                            <i class="fa fa-pencil"></i>
+                        </a>
+                        <a href="{{ path('blog_post_delete', {'id': post.id}) }}" class="btn btn-xs btn-danger">
+                            <i class="fa fa-remove"></i>
+                        </a>
+                    </td>
+                {% endif %}
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
